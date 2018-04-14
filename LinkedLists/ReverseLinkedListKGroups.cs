@@ -1,4 +1,19 @@
-﻿using System;
+﻿ /*
+ Algorithm
+  * 1. For each group of K nodes, 
+  *     a. Keep track of current head 
+  *     b. Keep track of the K+1th node
+  *     c. Keep track of tail of the previous K-nodes
+  *     d. Reverse the current group of K-nodes
+  *     e. Assign the new head of the reversed list to the tail of the previous k-nodes
+  *     f. Re-initialize the tail to the head of the current k-nodes before it was reversed
+  *     g. Move current head to head of the next group of k nodes
+    2. Repeat until last node processed
+ */
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,8 +69,7 @@ namespace IKStart
                 {
                     resHead = newHead;
                 }                
-                
-                
+                                
                 currHead = nextHead;
             }
 
